@@ -9,6 +9,8 @@ def home():
     if request.method == 'POST' :
         model = pickle.load(open('lr_model.pkl','rb'))
         user_input = request.form.get('size')
+        user_input=float(user_input)
+        print(user_input, type(user_input))
         prediction = model.predict([[user_input]])
         print(prediction)
     return render_template('project.html')
