@@ -30,7 +30,7 @@ print(tmax)
 
 app = Flask(__name__)
 
-@app.route('/hi')
+@app.route('/h')
 
 def home():
     if request.method == 'POST' :
